@@ -1,0 +1,602 @@
+---
+import Layout from "../layouts/layout.astro";
+---
+
+<Layout>
+  <section class="bg-white dark:bg-darkblack-500">
+    <div class="flex flex-col lg:flex-row justify-between min-h-screen">
+      <!-- Left -->
+      <div class="lg:w-1/2 px-5 xl:pl-12 pt-10">
+        <header>
+          <a href="index.html" class="">
+            <img
+              src="assets/images/logo/logo-color.png"
+              class="block dark:hidden"
+              alt="Logo"
+            />
+            <img
+              src="assets/images/logo/logo-white.png"
+              class="hidden dark:block"
+              alt="Logo"
+            />
+          </a>
+        </header>
+        <div class="max-w-[450px] m-auto pt-24 pb-16">
+          <header class="text-center mb-8">
+            <h2
+              class="text-bgray-900 dark:text-white text-4xl font-semibold font-poppins mb-2"
+            >
+              Sign in to DeliverZ.
+            </h2>
+            <p
+              class="font-urbanis text-base font-medium text-bgray-600 dark:text-bgray-50"
+            >
+              Admin Portal
+            </p>
+          </header>
+
+          <form id="login-form">
+            <div class="mb-4">
+              <input
+                id="email"
+                type="email"
+                class="text-bgray-800 text-base border border-bgray-300 dark:border-darkblack-400 dark:bg-darkblack-500 dark:text-white h-14 w-full focus:border-success-300 focus:ring-0 rounded-lg px-4 py-3.5 placeholder:text-bgray-500 placeholder:text-base"
+                placeholder="Username or email"
+              />
+            </div>
+            <div class="mb-6 relative">
+              <input
+                id="password"
+                type="password"
+                class="text-bgray-800 text-base border border-bgray-300 dark:border-darkblack-400 dark:bg-darkblack-500 dark:text-white h-14 w-full focus:border-success-300 focus:ring-0 rounded-lg px-4 py-3.5 placeholder:text-bgray-500 placeholder:text-base"
+                placeholder="Password"
+              />
+              <button
+                type="button"
+                id="toggle-password"
+                class="absolute top-4 right-4 bottom-4"
+              >
+                <svg
+                  width="22"
+                  height="20"
+                  viewBox="0 0 22 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 1L20 19"
+                    stroke="#718096"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path
+                    d="M9.58445 8.58704C9.20917 8.96205 8.99823 9.47079 8.99805 10.0013C8.99786 10.5319 9.20844 11.0408 9.58345 11.416C9.95847 11.7913 10.4672 12.0023 10.9977 12.0024C11.5283 12.0026 12.0372 11.7921 12.4125 11.417"
+                    stroke="#718096"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path
+                    d="M8.363 3.36506C9.22042 3.11978 10.1082 2.9969 11 3.00006C15 3.00006 18.333 5.33306 21 10.0001C20.222 11.3611 19.388 12.5241 18.497 13.4881M16.357 15.3491C14.726 16.4491 12.942 17.0001 11 17.0001C7 17.0001 3.667 14.6671 1 10.0001C2.369 7.60506 3.913 5.82506 5.632 4.65906"
+                    stroke="#718096"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="flex justify-between mb-7">
+              <div class="flex items-center space-x-3">
+                <input
+                  type="checkbox"
+                  class="w-5 h-5 dark:bg-darkblack-500 focus:ring-transparent rounded-full border border-bgray-300 focus:accent-success-300 text-success-300"
+                  name="remember"
+                  id="remember"
+                />
+                <label
+                  for="remember"
+                  class="text-bgray-900 dark:text-white text-base font-semibold"
+                  >Remember me</label
+                >
+              </div>
+              <!-- <div>
+                <a
+                  href="#"
+                  data-target="#multi-step-modal"
+                  class="modal-open text-success-300 font-semibold text-base underline"
+                  >Forgot Password?</a
+                >
+              </div> -->
+            </div>
+            <button
+              type="submit"
+              class="py-3.5 flex items-center justify-center text-white font-bold bg-success-300 hover:bg-success-400 transition-all rounded-lg w-full"
+            >
+              Sign In
+            </button>
+          </form>
+          <!-- <p
+            class="text-center text-bgray-900 dark:text-bgray-50 text-base font-medium pt-7"
+          >
+            Don’t have an account?
+            <a href="signup.html" class="font-semibold underline">Sign Up</a>
+          </p> -->
+          <nav
+            class="flex items-center justify-center flex-wrap gap-x-11 pt-24"
+          >
+            <a href="#" class="text-sm text-bgray-700 dark:text-white"
+              >Terms & Condition</a
+            >
+            <a href="#" class="text-sm text-bgray-700 dark:text-white"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-sm text-bgray-700 dark:text-white">Help</a>
+            <a href="#" class="text-sm text-bgray-700 dark:text-white"
+              >English</a
+            >
+          </nav>
+          <p class="text-bgray-600 dark:text-white text-center text-sm mt-6">
+            &#169; 2025 Created by <a href="http://ignitax.com">IGNITAX</a>. All
+            Right Reserved.
+          </p>
+        </div>
+      </div>
+      <!-- Right -->
+      <div
+        class="lg:w-1/2 lg:block hidden bg-[#F6FAFF] dark:bg-darkblack-600 p-20 relative"
+      >
+        <ul>
+          <li class="absolute top-10 left-8">
+            <img src="assets/images/shapes/square.svg" alt="" />
+          </li>
+          <li class="absolute right-12 top-14">
+            <img src="assets/images/shapes/vline.svg" alt="" />
+          </li>
+          <li class="absolute bottom-7 left-8">
+            <img src="assets/images/shapes/dotted.svg" alt="" />
+          </li>
+        </ul>
+        <div class="">
+          <img src="assets/images/illustration/signin.webp" alt="" />
+        </div>
+        <div>
+          <div class="text-center max-w-lg px-1.5 m-auto">
+            <h3
+              class="text-bgray-900 dark:text-white font-semibold font-popins text-4xl mb-4"
+            >
+              Next Gen Food Delivery Management System
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <!-- <div
+    class="modal hidden fixed inset-0 z-50 overflow-y-auto flex items-center justify-center"
+    id="multi-step-modal"
+  >
+    <div
+      class="modal-overlay absolute inset-0 bg-gray-500 opacity-75 dark:bg-bgray-900 dark:opacity-50"
+    >
+    </div>
+    <div class="modal-content w-full max-w-lg mx-auto px-4">
+      <div class="step-content step-1"> -->
+  <!-- My Content -->
+  <!-- <div
+          class="relative max-w-[492px] transform overflow-hidden rounded-lg bg-white dark:bg-darkblack-600 p-8 text-left transition-all"
+        >
+          <div class="absolute top-0 right-0 pt-5 pr-5">
+            <button
+              type="button"
+              id="step-1-cancel"
+              class="rounded-md bg-white dark:bg-darkblack-500 focus:outline-none"
+            >
+              <span class="sr-only">Close</span> -->
+  <!-- Cross Icon -->
+  <!-- <svg
+                class="stroke-darkblack-300"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 6L18 18M6 18L18 6L6 18Z"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <a href="signin.html" class="block mb-7">
+              <img
+                src="assets/images/logo/logo-color.svg"
+                class="block dark:hidden"
+                alt=""
+              />
+              <img
+                src="assets/images/logo/logo-white.svg"
+                class="hidden dark:block"
+                alt=""
+              />
+            </a>
+            <h3 class="text-2xl font-bold text-bgray-900 dark:text-white mb-3">
+              Reset your password
+            </h3>
+            <p
+              class="text-base font-medium text-bgray-600 dark:text-darkblack-300 mb-7"
+            >
+              Enter the email address associated with your account and we'll
+              send you a link to reset your password.
+            </p>
+            <form action="#">
+              <div class="mb-8">
+                <input
+                  type="text"
+                  class="rounded-lg bg-[#F5F5F5] dark:bg-darkblack-500 dark:text-white p-4 border-0 focus:border focus:ring-0 focus:border-success-300 w-full placeholder:font-medium text-base h-14"
+                  placeholder="Email"
+                />
+              </div>
+              <a
+                href="signin.html"
+                class="block text-sm font-bold text-success-300 mb-8 underline"
+                >Return to login</a
+              >
+              <button
+                type="button"
+                id="step-1-next"
+                class="flex w-full py-4 text-white bg-success-300 hover:bg-success-400 transition-all justify-center text-base font-medium rounded-lg"
+              >
+                Continue
+              </button>
+            </form>
+          </div>
+        </div>
+      </div> -->
+  <!-- Step 2 -->
+  <!-- <div class="step-content step-2 hidden">
+        <div
+          class="relative max-w-lg transform overflow-hidden rounded-lg bg-white dark:bg-darkblack-600 p-8 text-left transition-all"
+        >
+          <div class="absolute top-0 right-0 pt-5 pr-5">
+            <button
+              type="button"
+              class="rounded-md bg-white dark:bg-darkblack-500 focus:outline-none"
+              id="step-2-cancel"
+            >
+              <span class="sr-only">Close</span> -->
+  <!-- Cross Icon -->
+  <!-- <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 6L18 18M6 18L18 6L6 18Z"
+                  stroke="#747681"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <a href="signin.html" class="block mb-7">
+              <img
+                src="assets/images/logo/logo-color.svg"
+                class="block dark:hidden"
+                alt=""
+              />
+              <img
+                src="assets/images/logo/logo-white.svg"
+                class="hidden dark:block"
+                alt=""
+              />
+            </a>
+            <h3 class="text-2xl font-bold text-bgray-900 dark:text-white mb-3">
+              Enter verification code
+            </h3>
+            <p
+              class="text-base font-medium text-bgray-600 dark:text-darkblack-300 mb-7"
+            >
+              We have just sent a verification code to ajoy*****@mail.com
+            </p>
+            <form>
+              <div class="flex space-x-6 mb-8">
+                <input
+                  type="text"
+                  class="px-5 py-3 rounded-xl text-2xl border border-transparent focus:ring-0 focus:border focus:border-success-300 font-bold text-bgray-900 bg-[#F5F5F5] dark:bg-darkblack-500 dark:text-white w-14 h-14"
+                  placeholder=""
+                />
+                <input
+                  type="text"
+                  class="px-5 py-3 rounded-xl text-2xl border border-transparent focus:ring-0 focus:border focus:border-success-300 font-bold text-bgray-900 bg-[#F5F5F5] dark:bg-darkblack-500 dark:text-white w-14 h-14"
+                  placeholder=""
+                />
+                <input
+                  type="text"
+                  class="px-5 py-3 rounded-xl text-2xl border border-transparent focus:ring-0 focus:border focus:border-success-300 font-bold text-bgray-900 bg-[#F5F5F5] dark:bg-darkblack-500 dark:text-white w-14 h-14"
+                  placeholder=""
+                />
+                <input
+                  type="text"
+                  class="px-5 py-3 rounded-xl text-2xl border border-transparent focus:ring-0 focus:border focus:border-success-300 font-bold text-bgray-900 bg-[#F5F5F5] dark:bg-darkblack-500 dark:text-white w-14 h-14"
+                  placeholder=""
+                />
+                <input
+                  type="text"
+                  class="px-5 py-3 rounded-xl text-2xl border border-transparent focus:ring-0 focus:border focus:border-success-300 font-bold text-bgray-900 bg-[#F5F5F5] dark:bg-darkblack-500 dark:text-white w-14 h-14"
+                  placeholder=""
+                />
+              </div>
+              <button class="block text-sm font-bold text-success-300 mb-8">
+                Send the code again
+              </button>
+              <button
+                type="button"
+                id="step-2-next"
+                class="flex w-full py-4 text-white bg-success-300 transition-all justify-center text-base font-medium rounded-lg"
+              >
+                Verify
+              </button>
+            </form>
+          </div>
+        </div>
+      </div> -->
+  <!-- Step 3 -->
+  <!-- <div class="step-content step-3 hidden"> -->
+  <!-- Step 3 Content Here -->
+  <!-- <div
+          class="relative transform overflow-hidden rounded-lg bg-white dark:bg-darkblack-600 p-8 text-left transition-all"
+        >
+          <div class="absolute top-0 right-0 pt-5 pr-5">
+            <button
+              type="button"
+              id="step-3-cancel"
+              class="rounded-md bg-white dark:bg-darkblack-500 focus:outline-none"
+            >
+              <span class="sr-only">Close</span> -->
+  <!-- Cross Icon -->
+  <!-- <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 6L18 18M6 18L18 6L6 18Z"
+                  stroke="#747681"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <a href="signin.html" class="block mb-7">
+              <img
+                src="assets/images/logo/logo-color.svg"
+                class="block dark:hidden"
+                alt=""
+              />
+              <img
+                src="assets/images/logo/logo-white.svg"
+                class="hidden dark:block"
+                alt=""
+              />
+            </a>
+            <h3 class="text-2xl font-bold text-bgray-900 dark:text-white mb-3">
+              Create new password
+            </h3>
+            <p
+              class="text-base font-medium text-bgray-600 dark:text-darkblack-300 mb-7"
+            >
+              Please enter a new password. Your new password must be different
+              from previous password.
+            </p>
+            <form action="#">
+              <div class="mb-6 relative">
+                <input
+                  type="text"
+                  class="text-bgray-800 text-base border border-bgray-300 h-14 w-full
+                  focus:border focus:border-success-300 focus:ring-0 rounded-lg px-4 py-3.5 placeholder:text-bgray-500 placeholder:text-base dark:text-white dark:bg-darkblack-500 dark:border-0"
+                  placeholder="Password"
+                />
+                <button class="absolute top-4 right-4 bottom-4">
+                  <svg
+                    width="22"
+                    height="20"
+                    viewBox="0 0 22 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 1L20 19"
+                      stroke="#718096"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path
+                      d="M9.58445 8.58704C9.20917 8.96205 8.99823 9.47079 8.99805 10.0013C8.99786 10.5319 9.20844 11.0408 9.58345 11.416C9.95847 11.7913 10.4672 12.0023 10.9977 12.0024C11.5283 12.0026 12.0372 11.7921 12.4125 11.417"
+                      stroke="#718096"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path
+                      d="M8.363 3.36506C9.22042 3.11978 10.1082 2.9969 11 3.00006C15 3.00006 18.333 5.33306 21 10.0001C20.222 11.3611 19.388 12.5241 18.497 13.4881M16.357 15.3491C14.726 16.4491 12.942 17.0001 11 17.0001C7 17.0001 3.667 14.6671 1 10.0001C2.369 7.60506 3.913 5.82506 5.632 4.65906"
+                      stroke="#718096"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="mb-8 relative">
+                <input
+                  type="text"
+                  class="text-bgray-800 text-base border border-bgray-300 h-14 w-full focus:border-success-300 focus:ring-0 rounded-lg px-4 py-3.5 placeholder:text-bgray-500 placeholder:text-base dark:bg-darkblack-500 dark:border-0"
+                  placeholder="Confirm new Password"
+                />
+                <button class="absolute top-4 right-4 bottom-4">
+                  <svg
+                    width="22"
+                    height="20"
+                    viewBox="0 0 22 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 1L20 19"
+                      stroke="#718096"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path
+                      d="M9.58445 8.58704C9.20917 8.96205 8.99823 9.47079 8.99805 10.0013C8.99786 10.5319 9.20844 11.0408 9.58345 11.416C9.95847 11.7913 10.4672 12.0023 10.9977 12.0024C11.5283 12.0026 12.0372 11.7921 12.4125 11.417"
+                      stroke="#718096"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path
+                      d="M8.363 3.36506C9.22042 3.11978 10.1082 2.9969 11 3.00006C15 3.00006 18.333 5.33306 21 10.0001C20.222 11.3611 19.388 12.5241 18.497 13.4881M16.357 15.3491C14.726 16.4491 12.942 17.0001 11 17.0001C7 17.0001 3.667 14.6671 1 10.0001C2.369 7.60506 3.913 5.82506 5.632 4.65906"
+                      stroke="#718096"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </button>
+              </div>
+              <button
+                type="button"
+                id="step-2-next"
+                class="flex w-full py-4 text-white bg-success-300 hover:bg-success-400 transition-all justify-center text-base font-medium rounded-lg"
+              >
+                Confirm Password
+              </button>
+            </form>
+          </div>
+        </div>
+      </div> -->
+  <!-- Step 4 -->
+  <!-- <div class="step-content step-4 hidden">
+        <div
+          class="relative transform overflow-hidden rounded-lg bg-white dark:bg-darkblack-600 p-8 text-left transition-all"
+        >
+          <div class="absolute top-0 right-0 pt-5 pr-5">
+            <button
+              type="button"
+              id="step-4-cancel"
+              class="rounded-md bg-white dark:bg-darkblack-500 focus:outline-none"
+            >
+              <span class="sr-only">Close</span> -->
+  <!-- Cross Icon -->
+  <!-- <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 6L18 18M6 18L18 6L6 18Z"
+                  stroke="#747681"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="text-center mt-4">
+            <h3 class="text-2xl font-bold text-bgray-900 dark:text-white mb-3">
+              Your successfully changed your password
+            </h3>
+            <p
+              class="text-base font-medium text-bgray-600 dark:text-darkblack-300 mb-7"
+            >
+              Commodo gravida eget ultricies sed in lacus. Commodo, tellus duis
+              eros pellentesque.
+            </p>
+            <a
+              href="#"
+              id="step-4-cancel"
+              class="flex w-full py-4 text-white bg-success-300 hover:bg-success-400 transition-all justify-center text-base font-semibold rounded-lg"
+            >
+              Back to Login
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout> -->
+
+  <!-- Modal -->
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+    } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+
+    // Firebase Configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDyewXNSUQSTrQhQTlTwPj1J6Wx47-ylEM",
+      authDomain: "deliverz-auth.firebaseapp.com",
+      projectId: "deliverz-auth",
+      storageBucket: "deliverz-auth.firebasestorage.app",
+      messagingSenderId: "136913221848",
+      appId: "1:136913221848:web:cac322f4e4266108057fad",
+    };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    document
+      .getElementById("login-form")
+      .addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        try {
+          console.log("Firebase Auth Instance:", auth); // ✅ Debugging
+          const userCredential = await signInWithEmailAndPassword(
+            auth,
+            email,
+            password
+          );
+          const idToken = await userCredential.user.getIdToken();
+
+          sessionStorage.setItem("authToken", idToken);
+          sessionStorage.setItem("adminEmail", email);
+
+          console.log("Login Successful:", userCredential);
+          window.location.href = "/dashboard";
+        } catch (error) {
+          console.error("Firebase Auth Error:", error);
+          alert("Invalid credentials. Please try again.");
+        }
+      });
+  </script>
+
+  <script is:inline>
+    document
+      .getElementById("toggle-password")
+      .addEventListener("click", function () {
+        const passwordInput = document.getElementById("password");
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+        } else {
+          passwordInput.type = "password";
+        }
+      });
+  </script>
+</Layout>

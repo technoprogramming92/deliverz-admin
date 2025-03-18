@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DeliverZ - Admin Dashboard</title>
+    <link rel="stylesheet" href="/assets/css/slick.css" />
+    <link rel="stylesheet" href="/assets/css/aos.css" />
+    <link rel="stylesheet" href="/assets/css/output.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <slot />
+
+    <!--scripts -->
+    <script is:inline src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script is:inline src="/assets/js/aos.js"></script>
+    <script is:inline src="/assets/js/slick.min.js"></script>
+    <script is:inline>
+      AOS.init();
+    </script>
+    <script is:inline src="/assets/js/quill.min.js"></script>
+    <script is:inline src="/assets/js/main.js"></script>
+    <script is:inline src="/assets/js/chart.js"></script>
+    <script is:inline src="/assets/js/externalJS.js"></script>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
