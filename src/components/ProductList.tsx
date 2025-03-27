@@ -6,7 +6,7 @@ import {
   doc,
   deleteDoc,
 } from "firebase/firestore";
-import { db } from "../utils/firebase/client";
+import { db } from "../lib/firebase";
 import { toast } from "react-toastify";
 
 const ProductList = () => {
@@ -66,19 +66,7 @@ const ProductList = () => {
           ) : (
             products.map((product) => (
               <tr key={product.id} className="bg-white dark:bg-darkblack-600">
-                <td className="whitespace-nowrap p-4 text-sm font-medium rounded-l-lg">
-                  <span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M12.0001 17.75L5.82808 20.995L7.00708 14.122L2.00708 9.25495L8.90708 8.25495L11.9931 2.00195L15.0791 8.25495L21.9791 9.25495L16.9791 14.122L18.1581 20.995L12.0001 17.75Z"
-                        fill="#F6A723"
-                        stroke="#F6A723"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
-                  </span>
-                </td>
+                <td className="whitespace-nowrap p-4 text-sm font-medium rounded-l-lg"></td>
                 <td className="whitespace-nowrap py-4 text-sm text-gray-500 w-[400px] lg:w-auto">
                   <div className="flex items-center gap-5">
                     <div className="w-[64px] h-[64px]">
@@ -118,7 +106,7 @@ const ProductList = () => {
                 {/* ✅ Replaced Old Button with Delete Button */}
                 <td className="whitespace-nowrap pr-3 py-4 text-sm text-gray-500 rounded-r-lg">
                   <button
-                    className="bg-red-500 hover:bg-red-600 text-white font-medium px-4 py-2 rounded-lg transition duration-300"
+                    className="bg-success-300 hover:bg-success-400 transition duration-300 ease-in-out ml-6 font-semibold text-white py-3 flex items-center justify-center rounded-xl px-11"
                     onClick={() => handleDelete(product.id)}
                   >
                     Delete

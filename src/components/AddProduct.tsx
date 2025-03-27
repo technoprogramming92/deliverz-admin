@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
-import { db } from "../utils/firebase/client";
+import { db } from "../lib/firebase";
 import { toast } from "react-toastify";
 
 const AddProduct = ({ closeModal }: { closeModal: () => void }) => {
